@@ -24,7 +24,9 @@ DI BENCHMARK
   with    : 00:00:26.4634291
 ```
 
-Most important concept related to IoC is that allow to establish *loose coupling* between the layers you architect in your application. It allow you to ensure separation of concerns, a sort of OOP encapsulation but at class/services levels instead of properies or fields. it's highly used in the [clean architecture][1] pattern. Here the use of DI is related to a frequency that doesn't impact on the performance of the application while there are benefits about the level of abstraction and modularity the application can achieve.
+Most important concept related to IoC is that allow to establish *loose coupling* between the layers you architect in your application. It allow you to ensure separation of concerns, enabling a sort of OOP encapsulation but at class/services levels instead of properies or fields.
+
+It's highly used in the [clean architecture][1] pattern. Here the use of DI is related to a frequency that doesn't impact on the performance of the application while there are benefits about the level of abstraction and modularity the application can achieve.
 
 [1]: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
