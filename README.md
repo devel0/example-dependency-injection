@@ -11,7 +11,7 @@
 
 Purpose of this example is to show what dependency injection consists of and why its useful.
 
-Concept of DI also named IOC ( inversion of control ) states that you don't create object instances from your classes but is the engine that take care of that.
+DI sometimes referred as IOC ( inversion of control ) states that you don't create object instances from your classes but is the engine that take care of that.
 
 One think how can a program work if you can't create any object, of course in fact youll'do "inversely" through the use of a service builder in which you declare concrete object mapping to abstract, interfaces. Generally these service builder manage also the lifetime scope of the object as per singleton rather than scope ( they created on request and released when no more referenced ).
 
@@ -43,11 +43,42 @@ So why to use DI ? the most important concept related to IoC is that allow to es
 [6]: https://github.com/devel0/example-dependency-injection/blob/02038d482563e8944ee163a78007c99c20536e3a/Service2/Service2.cs#L6-L8
 [7]: https://github.com/devel0/example-dependency-injection/blob/02038d482563e8944ee163a78007c99c20536e3a/Program.cs#L5-L16
 
+## Execution
+
+```sh
+$ dotnet run
+0.8722451498981519 + 0.7761152910999208 = 1.6483604409980728 ( matches )
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/devel0/Documents/opensource/example-di
+0.8369665338633472 + 0.22125008465598472 = 1.058216618519332 ( matches )
+0.9576765265593807 + 0.7209286927062147 = 1.6786052192655956 ( matches )
+0.12588186914263888 + 0.1914292963073334 = 0.3173111654499723 ( matches )
+```
+
 ## Fun facts
 
 Without changing the implementation of Service2 you can execute the application using another instance type of Service1 by [substituting in the service mapping][8].
 
 [8]: https://github.com/devel0/example-dependency-injection/blob/02038d482563e8944ee163a78007c99c20536e3a/Program.cs#L10
+
+```sh
+$ dotnet run
+0.8001468290359208 + 0.212695476319962 = 1.0128423053558828 ( NOT matches )
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /home/devel0/Documents/opensource/example-di
+0.8244152948560144 + 0.14512889210099444 = 0.9695441869570088 ( NOT matches )
+0.6328938769401693 + 0.5873820115870374 = 1.2202758885272067 ( NOT matches )
+0.9464424297386741 + 0.14904111339171255 = 1.0954835431303866 ( NOT matches )
+0.19357539247737165 + 0.8354667215111734 = 1.029042113988545 ( NOT matches )
+```
 
 ## How this project was built
 
