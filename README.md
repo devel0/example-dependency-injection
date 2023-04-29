@@ -11,7 +11,7 @@
 
 Purpose of this example is to show what dependency injection consists of and why its useful.
 
-DI sometimes referred as IOC ( inversion of control ) states that you don't create object instances from your classes but is the engine that take care of that.
+DI sometimes referred as IOC ( inversion of control ) states that isn't you responsible to create class instances but the service provider take care of that.
 
 One think how can a program work if you can't create any object, of course in fact youll'do "inversely" through the use of a service builder in which you declare concrete object mapping to abstract, interfaces. Generally these service builder manage also the lifetime scope of the object as per singleton rather than scope ( they created on request and released when no more referenced ).
 
