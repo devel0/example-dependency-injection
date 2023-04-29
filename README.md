@@ -15,7 +15,7 @@ DI sometimes referred as IOC ( inversion of control ) states that you don't crea
 
 One think how can a program work if you can't create any object, of course in fact youll'do "inversely" through the use of a service builder in which you declare concrete object mapping to abstract, interfaces. Generally these service builder manage also the lifetime scope of the object as per singleton rather than scope ( they created on request and released when no more referenced ).
 
-Use of DI could not be compatible within a **realtime application** where the reflecting lookup done by the DI system introduce a little overhead, to benchmark the differences checkout the `benchmark` branch with `git checkout benchmark`. Follows comparision:
+Use of DI should not used for functions involved in a **realtime application** where the reflecting lookup done by the DI system introduce a little overhead, to benchmark the differences checkout the `benchmark` branch with `git checkout benchmark`. Follows comparision:
 
 ```sh
 devel0@tuf:~/Documents/opensource/example-di$ dn run -c Release
@@ -24,7 +24,7 @@ DI BENCHMARK
   with    : 00:00:26.4634291
 ```
 
-So why to use DI ? the most important concept related to IoC is that allow to establish *loose coupling* between the layers you architect in your application. It allow you to ensure separation of concerns, a sort of OOP encapsulation but at class/services levels instead of properies or fields. it's highly used in the [clean architecture][1] pattern.
+Most important concept related to IoC is that allow to establish *loose coupling* between the layers you architect in your application. It allow you to ensure separation of concerns, a sort of OOP encapsulation but at class/services levels instead of properies or fields. it's highly used in the [clean architecture][1] pattern. Here the use of DI is related to a frequency that doesn't impact on the performance of the application while there are benefits about the level of abstraction and modularity the application can achieve.
 
 [1]: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
