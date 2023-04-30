@@ -24,7 +24,7 @@ DI BENCHMARK
   with    : 00:00:26.4634291
 ```
 
-IoC allow to establish *loose coupling* between the layers you architect in your application. It allow you to ensure separation of concerns, enabling a sort of OOP encapsulation but at class/services levels instead of properies or fields.
+IoC allow to establish *loose coupling* between the layers you architect in your application. It allow you to ensure separation of concerns, enabling a sort of OOP encapsulation but at class/services rather than at methods or properties level.
 
 DI is also used in the [clean architecture][1] pattern where there are benefits about the level of abstraction and modularity the application can achieve.
 
