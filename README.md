@@ -28,7 +28,7 @@ IoC allow to establish *loose coupling* between the layers you architect in your
 
 DI is also used in the [clean architecture][1] pattern where there are benefits about the level of abstraction and modularity the application can achieve.
 
-[1]: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+[1]: https://yoan-thirion.gitbook.io/knowledge-base/software-craftsmanship/code-katas/clean-architecture
 
 ## Dev keynotes
 
